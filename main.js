@@ -21,7 +21,12 @@ TERMS AND CONDITIONS
 
 //DO NOT DISTRIBUTE//
 
-
+function getBiomeName(x,z){
+if
+(Level.getBiomeName(x,z) == "Jungle M" && Level.getBiomeName(x,z) == "Jungle" ) { Block.addOreProperties(233,0,DimensionId.NORMAL,10,128,3,7,3,12,[0]);
+print("I got here");
+}
+}
 
 //MOD API//
 
@@ -186,7 +191,8 @@ Player.addItemCreativeInv(1324,1,0);
 Item.setHandEquipped(1324,1);
 
 function mainModTick()
-{
+{ 
+getBiomeName(Player.getX(),Player.getZ());
 if (Player.getCarriedItem() == 1312){ Level.addParticle(ParticleType.lava, Player.getX(Player)+Math.random() *4-2, Player.getY(Player)+Math.random() *4-2, Player.getZ(Player)+Math.random() *4-2, 0, 0, 0, 1);
 }
 if (Player.getCarriedItem() == 1311)
@@ -453,11 +459,3 @@ Entity.setCarriedItem(tormented, 1309, 1309,1309);
 Entity.addEffect(tormented,MobEffect.damageBoost , Infinite, 5, true, false);
 }
 }
-
-function getBiomeName(x,z){
-if
-(Level.getBiomeName(x,z) == "Jungle M" && Level.getBiomeName(x,z) == "Jungle" ) { Block.addOreProperties(233,0,DimensionId.NORMAL,10,128,3,7,3,12,[0]);
-print("I got here");
-}
-}
-

@@ -457,7 +457,7 @@ Entity.addEffect(tormented,MobEffect.damageBoost , Infinite, 5, true, false);
 function getBiomeName(x,z){
 if
 (Level.getBiomeName(x,z) == "Jungle M" && Level.getBiomeName(x,z) == "Jungle" ) { Block.addOreProperties(233,0,DimensionId.NORMAL,10,128,3,7,3,12,[0]);
-level.setTile
+print("I got here");
 }
 }
 
